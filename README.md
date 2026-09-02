@@ -38,16 +38,19 @@ Why it works:
 
 ## 3. Design system
 
-**Palette** — a deliberate, dark‑first *celestial* ground (XORO uses sparkles/dark UI), with the refraction spectrum as the accent system:
+**Palette** — a deliberate *soft‑lavender* light ground (not plain white, and steered away from the AI‑cream cliché — biased toward XORO’s brand violet), with the refraction spectrum as the accent system. Accents are deepened so they hold contrast on light:
 
 | Role | Hex | |
 |---|---|---|
-| Ground (violet‑black) | `#0B0713` | not pure black — biased toward the brand violet |
-| Incoming beam | `#FFF7E9` | the “static” white light |
-| Sales | `#FF5F8B` | rose‑magenta — energy, conversion |
-| Marketing | `#8B6BFF` | violet — brand & creativity (the core hue) |
-| Training | `#34E3C4` | cyan‑teal — clarity, learning |
-| Spark / kicker | `#FFD9A0` | warm gold highlight |
+| Ground (soft lavender) | `#FBFAFE → #EEEAF8` | subtle violet‑tinted gradient; white cards float on it |
+| Ink (text) | `#1C1430` | deep violet‑ink, never pure black |
+| Incoming beam | `#6E619A` | the “static” light, as a soft graphite shaft |
+| Sales | `#E93A79` | rose‑magenta — energy, conversion |
+| Marketing | `#6A45F0` | violet — brand & creativity (the core hue) |
+| Training | `#0FAE94` | teal — clarity, learning |
+| Spark / kicker | `#CE8A1B` | warm amber highlight |
+
+On a light ground, glow does the opposite of what it does on black — so the refracted beams are rendered as **translucent colored rays that tint the lavender ground**, and the celestial motif becomes a scatter of faint four‑point **sparkles** in the accent hues rather than white stars.
 
 **Type**
 - **Syne** — display. Characterful, wide, art‑tech forms that feel spatial without being a default poster face.
@@ -68,12 +71,23 @@ Each domain card is built as a small argument:
 
 All copy is drawn from XORO Story’s own positioning.
 
-## 5. Craft notes
-- **Print‑ready:** `@page { size: A2 portrait }`; layout is built in container units (`cqw`) so screen and print scale identically. Exports cleanly to PDF.
-- **Responsive & accessible:** balanced headline wrapping, visible focus state on the print control, and a `prefers-reduced-motion` guard that stills the animated light rays.
-- **Self‑contained:** one HTML file — fonts from Google Fonts, all graphics as inline SVG, a lightweight canvas starfield. No build step, no dependencies.
+## 5. Interactive layer (screen)
 
-## 6. Run / export
+The poster doubles as a small interactive web piece — every interaction reinforces the *refraction* idea rather than just decorating it:
+
+- **Domain focus** — hover, tap, or keyboard‑focus a card and **its** refraction beam lights up while the other two dim; the card lifts with its accent ring. You literally refract the story into one domain at a time. Click to pin it.
+- **Spatial parallax** — the prism and beams shift with the cursor, giving the scene depth that echoes the XR/spatial product.
+- **Capability tooltips** — hover/focus the Fabel · Editor · XR · Deploy tags for a one‑line explanation of each part of the engine.
+- **Cursor spotlight** — a soft violet light follows the pointer.
+
+All of it is keyboard‑accessible, disabled under `prefers-reduced-motion`, and stripped from the print output.
+
+## 6. Craft notes
+- **Print‑ready:** `@page { size: A2 portrait }`; layout is built in container units (`cqw`) so screen and print scale identically. Interactive states and the cursor light are reset for print, so the PDF is always the clean poster.
+- **Responsive & accessible:** balanced headline wrapping, visible focus rings, semantic `role="button"` cards, and a `prefers-reduced-motion` guard that stills the animated light rays and parallax.
+- **Self‑contained:** one HTML file — fonts from Google Fonts, all graphics as inline SVG, a lightweight canvas sparkle field, vanilla‑JS interactions. No build step, no dependencies.
+
+## 7. Run / export
 ```bash
 # open directly
 start poster.html        # Windows
