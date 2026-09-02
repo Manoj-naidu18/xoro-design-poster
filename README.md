@@ -2,7 +2,7 @@
 
 A poster that communicates the value **XORO Story** proposes to different domains.
 
-**Deliverable:** [`poster.html`](poster.html) — a self‑contained, print‑ready A2 portrait poster. Open it in any browser and use **Print → Save as PDF** to export.
+**Deliverable:** [Open the rendered poster](https://manoj-naidu18.github.io/xoro-design-poster/poster.html) — a self‑contained, print‑ready A2 portrait poster. Use **Print → Save as PDF** to export.
 
 ---
 
