@@ -3,7 +3,6 @@
 A poster that communicates the value **XORO Story** proposes to different domains.
 
 **Deliverable:** [`poster.html`](poster.html) — a self‑contained, print‑ready A2 portrait poster. Open it in any browser and use **Print → Save as PDF** to export.
-**Live version:** https://claude.ai/code/artifact/141f3f62-2e33-4b3c-b2ea-afa87a501a65
 
 ---
 
